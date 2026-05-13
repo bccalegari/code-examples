@@ -1,0 +1,10 @@
+services:
+  client-api:
+    build: ./client-api
+    ports:
+      - "8080:8080"
+    depends_on:
+      - provider-api
+
+  provider-api:
+    build: ./provider-api
